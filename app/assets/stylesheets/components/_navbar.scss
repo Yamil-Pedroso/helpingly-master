@@ -1,0 +1,40 @@
+.grosor {
+  height: 85px;
+}
+
+.navbar-right {
+  margin-right: 100px;
+}
+
+.navbar-right li {
+  list-style: none;
+}
+
+.form-wrapper {
+  margin-right: 60px;
+}
+
+ion-icon {
+  font-size: 42px;
+  color: #fff;
+}
+
+.navbutton {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 100px;
+}
+
+.navbar {
+  background-color: $greenfive;
+  height: 50px;
+}
+
+.nav-big {
+  font-size: 20px;
+
+  &:hover {
+    color: black;
+  }
+}

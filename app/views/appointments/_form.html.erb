@@ -1,0 +1,10 @@
+<div class = "form">
+  <%= simple_form_for [@offer, @appointment] do |f| %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <%= f.input :hours %>
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+  <% end %>
+</div>

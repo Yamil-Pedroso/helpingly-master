@@ -1,0 +1,36 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Owner</th>
+      <th scope="col">Title</th>
+      <th scope="col">Start Date</th>
+      <th scope="col">End Date</th>
+      <th scope="col">Hours</th>
+      <th scope="col">Accept</th>
+      <th scope="col">Decline</th>
+      <th scope="col">Accepted</th>
+    </tr>
+  </thead>
+  <tbody>
+   <% count = 1 %>
+      <% current_user.appointments.each do |appointment| %>
+        <tr>
+          <td> <%= count %> </td>
+            <% count += 1 %>
+          <td> <%=appointment.offer.user.email %> </td>
+          <td> <%=appointment.offer.title %> </td>
+          <td> <%=appointment.start_date %> </td>
+          <td> <%=appointment.end_date %> </td>
+          <td> <%=appointment.hours %> </td>
+          <td> <%= button_to "Accept offer", offer_appointment_path(appointment.offer, appointment), method: :put, class: "btn btn-success" %></td>
+          <td> <%= link_to "Decline offer", offer_appointment_path(appointment.offer, appointment), method: :delete,  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger text-light" %></td>
+          <% if appointment.accepted == true %>
+                <td> Yes </td>
+                <% else %>
+                <td> No </td>
+                <% end %>
+        </tr>
+      <% end %>
+  </tbody>
+</table>

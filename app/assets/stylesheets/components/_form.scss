@@ -1,0 +1,24 @@
+.form {
+  color: $black;
+  padding: 40px 80px;
+  background-color: $greenthree;
+  border-radius: 10px;
+  width: 700px;
+  margin: 20px auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  .btn {
+    color: $greensix;
+    width: 100%;
+    background-color: $greenfour;
+    padding: 10px;
+  }
+}
+
+#offer_description {
+  height: 90px;
+}
+
+.container {
+  background-color: $greentwo;
+}

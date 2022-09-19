@@ -1,0 +1,74 @@
+<div class="page">
+  <div class="left">
+    <p> <%= image_tag 'https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60', class: "profile_pic" %> </p>
+      <h5> <%= current_user.email %> </h5>
+      <div class="button">
+      <%= link_to "Create a new offer", new_offer_path, class: "btn btn-ghost envelope" %>
+    </div>
+    <%= link_to(user_appointments_path(current_user), class: "card-link") do %>
+      <i class="fa-solid fa-envelope"></i>
+    <% end %>
+
+
+  </div>
+  <div class="right">
+    <div class="header">
+      <h2> Overview of my Offers </h2>
+    </div>
+    <div class="grid">
+      <% current_user.offers.each do |offer| %>
+        <div class="g-col-md-4">
+          <%= link_to(offer_path(offer), class: "card-link") do %>
+            <div class="card-trip">
+              <%= cl_image_tag offer.photo.key, height: 200, width: 400, crop: :fill %>
+              <div class="card-trip-infos">
+                <div>
+                  <h2> <%= offer.title  %> </h2>
+                  <p><%= offer.description.truncate(30, separator: ' ') %> </p>
+                </div>
+                  <h2 class="card-trip-pricing">CHF <%= offer.hourly_rate  %> </h2>
+              </div>
+            </div>
+            <div class="card-controllers">
+              <%= link_to 'Delete', offer_path(offer), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'delete-card' %>
+              <%= link_to 'Edit', edit_offer_path(offer), class: "edit-offer" %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+
+    <h2 id="booking-overview"> Overview of my Bookings </h2>
+    <div class="bookings">
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Owner</th>
+            <th scope="col">Title</th>
+            <th scope="col">Start Date</th>
+            <th scope="col">End Date</th>
+            <th scope="col">Hours</th>
+            <th scope="col">Accepted?</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% current_user.appointments.each do |appointment| %>
+              <tr>
+                <td> <%=appointment.offer.user.email %> </td>
+                <td> <%=appointment.offer.title %> </td>
+                <td> <%=appointment.start_date %> </td>
+                <td> <%=appointment.end_date %> </td>
+                <td> <%=appointment.hours %> </td>
+                <% if appointment.accepted == true %>
+                <td style="color: #475841"> Yes </td>
+                <% else %>
+                <td style="color: rgb(255, 0, 0)"> No </td>
+                <% end %>
+              </tr>
+            <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,86 @@
+.cont-wrapper {
+  margin-top: 100px;
+}
+
+.booking {
+  width: 25%;
+  height: 50px;
+  background-color: $greensix;
+  border-radius: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+}
+
+.booking a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.offer-images {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.offer-img {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.offer-img:hover {
+  transform: scale(1.1);
+}
+
+.more {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.left-d {
+  width: 200%;
+  height: 100%;
+  background-color: $greensix;
+  border-radius: 20px 0 0 20px;
+}
+
+.arrow-link {
+  font-size: 24px;
+  color: rgb(62, 62, 62);
+  cursor: pointer;
+}
+
+.cont-useroffer {
+  display: flex;
+  flex-direction: row;
+}
+
+#cool-map {
+  margin-top: 100px;
+}
+
+.offer-pic {
+  margin-top: 50px;
+}
+
+.disc-more {
+  text-decoration: none;
+  color: #000;
+  border: none;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.discover-more {
+  text-decoration: none;
+}

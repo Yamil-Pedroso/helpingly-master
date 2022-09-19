@@ -1,0 +1,10 @@
+<div class = "container">
+  <h1 class = "header">Edit <%= @offer.title %> </h1>
+  <%= render "form", Offer: @offer %>
+
+  <br>
+</div>
+
+<div class = "button">
+  <%= link_to "Back to my page", user_path(current_user), class:"btn btn-ghost" %>
+</div>

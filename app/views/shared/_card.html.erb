@@ -1,0 +1,10 @@
+<div class="card-trip">
+  <%= cl_image_tag offer.photo.key, height: 300, width: 400, crop: :fill %>
+  <div class="card-trip-infos">
+    <div>
+      <h2> <%= offer.title  %> </h2>
+      <p><%= offer.description  %> </p>
+    </div>
+      <h2 class="card-trip-pricing"><%= offer.hourly_rate  %> </h2>
+  </div>
+</div>

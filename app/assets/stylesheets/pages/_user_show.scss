@@ -1,0 +1,65 @@
+.page {
+  display: flex;
+  margin: 50px;
+}
+
+.left {
+  width:25vw;
+  max-width:25vw;
+  border-right: solid 1px rgb(128, 128, 128);
+  text-align: center;
+
+  .fa-solid {
+    font-size: 100px;
+  }
+}
+
+.right {
+  width:75vw;
+  max-width:75vw;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.profile_pic {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.grid {
+  margin: auto;
+  width: 90%;
+}
+
+.edit-offer{
+  text-decoration: none;
+  color: rgb(199, 199, 199);
+  padding-left: 222px;
+
+  &:hover {
+    color: rgb(14, 14, 14)
+  }
+}
+
+.envelope{
+  margin-bottom: 50px;
+}

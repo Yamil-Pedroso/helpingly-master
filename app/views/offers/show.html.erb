@@ -1,0 +1,60 @@
+<div class="cont-wrapper">
+  <div class="grid">
+    <div class="g-col-6 m-3">
+      <h1>
+        <%= @offer.title %>
+      </h1>
+      <hr class="border border-dark border-2 opacity-50">
+      <h4>
+        <%= @offer.description %>
+      </h4>
+      <br>
+      <div class = "pricelocation">
+        <h5>CHF <%= @offer.hourly_rate %></h5>
+        <h4><i class="fa-solid fa-location-dot"></i> <%= @offer.location %></h2>
+      </div>
+      <div class="booking">
+        <%= link_to "Book", new_offer_appointment_path(@offer) %>
+      </div>
+      <hr class="border border-dark border-2 opacity-50" style="margin-top: 75px;">
+    </div>
+    <div class="g-col-6">
+      <div class="g-col-6 g-col-md-4">
+          <%= cl_image_tag(@offer.photo.key, width: 600, height: 500, crop: :fill) %>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="more">
+    <h3>MORE FROM THIS HELPER...</h3>
+  </div>
+
+<div class="grid">
+  <% @offer.user.offers.excluding(@offer).each do |offer| %>
+    <div class="g-col-md-4">
+        <%= link_to(offer_path(offer), class: "card-link") do %>
+          <div class="card-trip">
+            <% if offer.photo.attached? %>
+              <%= cl_image_tag offer.photo.key, height: 300, width: 400, crop: :fill %>
+            <% end %>
+            <div class="card-trip-infos">
+              <div>
+                <h2> <%= offer.title  %> </h2>
+                <p><%= offer.description.truncate(30, separator: ' ') %> </p>
+              </div>
+              <h2 class="card-trip-pricing"> CHF <%= offer.hourly_rate  %> </h2>
+            </div>
+          </div>
+        <% end %>
+      </div>
+  <% end %>
+</div>
+
+<div class="container">
+  <div id="cool-map" style="width: 100%; height: 600px;"
+    data-controller="map"
+    data-map-markers-value="<%= Array(@markers).to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+</div>

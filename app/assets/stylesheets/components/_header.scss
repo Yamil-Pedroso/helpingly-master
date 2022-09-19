@@ -1,0 +1,21 @@
+h1 {
+  font-size: 60px;
+  text-align: center;
+  font-family: $headers-font;
+  margin-top: 10px;
+}
+
+h2 {
+  font-size: 40px;
+  text-align: center;
+  font-family: $headers-font;
+}
+
+h5 {
+  font-family: $headers-font;
+  text-align: center;
+}
+
+.cont-wrapper h5 {
+  text-align: left;
+}

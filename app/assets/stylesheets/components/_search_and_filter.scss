@@ -1,0 +1,99 @@
+.navbar-lewagon {
+  justify-content: space-between;
+  background: white;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+
+/*search box css start here*/
+// .search-sec{
+//   padding: 4rem;
+// }
+
+
+@media (min-width: 992px){
+  .search-sec{
+      position: relative;
+      top: -58vh;
+  }
+}
+
+@media (max-width: 992px){
+  .search-sec{
+    display: flex;
+    background: rgba(26, 70, 104, 0.51);
+  }
+}
+
+.search-bar {
+  width: 500px;
+  height: 40px;
+  margin-bottom: 70px;
+}
+
+.container-search {
+  width: 500px;
+  height: 40px;
+  margin: 0 auto;
+
+  .btn-ghost {
+    margin: 0;
+  }
+}
+
+.d-flex {
+  width: 500px;
+  height: 40px;
+
+  .form-control{
+    opacity: 0.7;
+  }
+}
+
+.filter{
+  display: flex;
+  justify-content: space-around;
+  width: 700px;
+  margin: auto;
+}
+
+.fa-solid {
+  color: $greenfive;
+
+  &:hover {
+    color: $greensix;
+  }
+}
+
+.filter-icon {
+  text-align: center;
+
+  p {
+    font-size: 16px;
+    font-weight: bolder;
+    color: $greensix;
+  }
+
+}
+
+.carousel-caption {
+  position: relative;
+  margin: auto 550px auto auto;
+  top: -25vh;
+  font-weight: bold;
+}
+
+.offers-text {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#offers {
+  padding-top: 20px;
+}
