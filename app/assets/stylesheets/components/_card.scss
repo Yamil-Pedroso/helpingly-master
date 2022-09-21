@@ -42,17 +42,18 @@
   margin: 0;
 }
 
-
-.card-trip .card-trip-infos {
-  padding: 16px;
+.cards-wrapper {
+  width: 90%;
+  height: 1000px;
+  overflow: hidden;
+  overflow: scroll;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
+  margin: 40px auto;
+  flex-wrap: wrap;
+}
 
-  h2 {
-    text-align: left;
-  }
+.card-ui {
+  margin: 10px;
 }
 
 .card-link{

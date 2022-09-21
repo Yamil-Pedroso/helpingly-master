@@ -1,0 +1,25 @@
+.icon-category-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+.icon-cat {
+  width: 84px;
+  height: 63px;
+  background-color: #111933;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.fa-solid {
+    color: #D9E1FC;
+    font-size: 24px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+     transform: scale(1.2);
+ }
+}

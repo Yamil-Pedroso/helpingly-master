@@ -1,94 +1,104 @@
-<div class="container-search">
-  <div class="row">
-    <div class="search-bar">
-      <%= form_with url: offers_path, method: :get do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Get some help in your city"
-        %>
-          <%= submit_tag "Search", class: "btn-ghost" %>
-      <% end %>
+<div class="carrusel-wrapper">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <% @offers.each do |offer| %>
+          <div class="carousel-item active">
+          <%= link_to cl_image_tag(offer.photo.key, id: "banner"), offer_path(offer) %>
+          <div class="carousel-caption d-none d-md-block">
+            <h2> <%= offer.title %> </h2>
+          </div>
+        </div>
+        <% end %>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-  </div>
+</div>
+
+<div class="search-wrapper">
+  <%= form_with url: offers_path, method: :get, class:"form-search-wrapper" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find some offers" %>
+    <%= submit_tag "Search" %>
+  <% end %>
 </div>
 
 
-<div class="">
-  <div class="icon-category">
-    <div class="home filter-icon">
+
+<div class="icon-category-wrapper">
+    <div class="home icon-cat">
       <%= link_to request.params.merge(category: "Home") do %>
         <i class="fa-solid fa-house"></i>
       <% end %>
-      <p>Home</p>
     </div>
 
-    <div class="sports filter-icon">
+    <div class="sports icon-cat">
       <%= link_to request.params.merge(category: "Sports") do %>
         <i class="fa-solid fa-basketball"></i>
       <% end %>
-      <p>Sports</p>
     </div>
 
-    <div class="pets filter-icon">
+    <div class="pets icon-cat">
       <%= link_to request.params.merge(category: "Pets") do %>
         <i class="fa-solid fa-dog"></i>
       <% end %>
-      <p>Pets</p>
     </div>
-    <div class="education filter-icon">
+    <div class="education icon-cat">
       <%= link_to request.params.merge(category: "Education") do %>
         <i class="fa-solid fa-book"></i>
       <% end %>
-      <p>Education</p>
     </div>
-    <div class="music filter-icon">
+    <div class="music icon-cat">
       <%= link_to request.params.merge(category: "Music") do %>
         <i class="fa-solid fa-music"></i>
       <% end %>
-      <p>Music</p>
     </div>
-    <div class="art filter-icon">
+    <div class="art icon-cat">
       <%= link_to request.params.merge(category: "Arts") do %>
         <i class="fa-solid fa-paintbrush"></i>
        <% end %>
-      <p>Arts</p>
     </div>
-    <div class="garden filter-icon">
+    <div class="garden icon-cat">
       <%= link_to request.params.merge(category: "Garden") do %>
         <i class="fa-solid fa-tree"></i>
       <% end %>
-      <p>Garden</p>
     </div>
-    <div class="other filter-icon">
+    <div class="other icon-cat">
       <%= link_to request.params.merge(category: "Other") do %>
         <i class="fa-solid fa-question"></i>
       <% end %>
-      <p>Other</p>
     </div>
-  </div>
-
-  <div>
-    <h3 class="offers-text">Find help in your city</h3>
-    <div>
-      <% @offers.each do |offer| %>
-        <div>
-          <%= link_to(offer_path(offer), class: "card-link") do %>
-            <div class="card-trip">
-              <% if offer.photo.attached? %>
-                <%= cl_image_tag offer.photo.key, height: 300, width: 400, crop: :fill %>
-              <% end %>
-              <div class="card-trip-infos">
-                <div>
-                  <h2> <%= offer.title  %> </h2>
-                  <p><%= offer.description.truncate(30, separator: ' ') %> </p>
-                </div>
-                <h2 class="card-trip-pricing"> CHF <%= offer.hourly_rate  %> </h2>
-              </div>
-            </div>
-          <% end %>
-        </div>
-      <%end%>
-    </div>
-  </div>
 </div>
+
+
+
+  <h3 class="offers-text">CHOOSE INTERESANT OFFERS IN <span style="color: #4975CB;">YOUR CITY</span></h3>
+   <h5>Lorem ipsum dolor sit amet, consectetur</h5>
+  <div class="cards-wrapper">
+    <% @offers.each do |offer| %>
+      <div class="cards-cont">
+        <%= link_to(offer_path(offer), class: "card-link") do %>
+          <div class="card-ui">
+            <% if offer.photo.attached? %>
+              <%= cl_image_tag offer.photo.key, height: 508, width: 753, crop: :fill %>
+            <% end %>
+            <!--<div class="card-trip-infos">
+              <div>
+                <h2> <%#= offer.title  %> </h2>
+                <p><%#= offer.description.truncate(30, separator: ' ') %> </p>
+              </div>-->
+              <!--<h2 class="card-trip-pricing"> CHF <%#= offer.hourly_rate  %> </h2>
+            </div>-->
+          </div>
+        <% end %>
+      </div>
+    <%end%>
+  </div>
