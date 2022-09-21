@@ -1,7 +1,22 @@
-.grosor {
-  height: 85px;
+.navbar-container {
+  display: flex;
 }
 
+.nav-carrusel-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 54%;
+}
+
+.left-nav {
+   width: 46%;
+   height: 1000px;
+   background-color: #111933;
+}
+
+.navbar {
+  background-color: #4298F4;
+}
 .navbar-right {
   margin-right: 100px;
 }
@@ -26,10 +41,6 @@ ion-icon {
   margin-bottom: 100px;
 }
 
-.navbar {
-  background-color: $greenfive;
-  height: 50px;
-}
 
 .nav-big {
   font-size: 20px;

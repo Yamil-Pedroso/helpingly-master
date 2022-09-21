@@ -11,11 +11,6 @@
   width: 40px;
 }
 
-/*search box css start here*/
-// .search-sec{
-//   padding: 4rem;
-// }
-
 
 @media (min-width: 992px){
   .search-sec{
@@ -56,11 +51,10 @@
   }
 }
 
-.filter{
+.icon-category{
   display: flex;
   justify-content: space-around;
-  width: 700px;
-  margin: auto;
+  margin-top: 500px;
 }
 
 .fa-solid {
