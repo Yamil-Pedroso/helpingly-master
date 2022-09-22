@@ -51,9 +51,23 @@
   margin: 40px auto;
   flex-wrap: wrap;
 }
+.cards-wrapper-dashboard {
+  width: 90%;
+  height: 1000px;
+  overflow: hidden;
+  overflow: scroll;
+  display: flex;
+  margin: 40px auto;
+  flex-wrap: wrap;
+}
 
 .card-ui {
   margin: 10px;
+}
+
+.img-details {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .card-link{
