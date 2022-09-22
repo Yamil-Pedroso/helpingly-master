@@ -1,28 +1,158 @@
-.form {
-  color: $black;
-  padding: 40px 80px;
-  background-color: $greenthree;
-  border-radius: 10px;
-  width: 700px;
-  margin: 20px auto;
+// --- FORM SIGNUP --- //
+.form-wrapper {
+  margin-top: 200px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 0 auto;
+  width: 970px;
+  height: 565px;
+}
+.form {
+  width: 576px;
+  height: 565px;
+  color: #000;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   .btn {
-    color: $greensix;
+    color: #6797F3;
     width: 100%;
-    background-color: $greenfour;
     padding: 10px;
+    background-color: #111933;
   }
+}
+
+.form-title {
+  width: 393px;
+  height: 565px;
+  background-color: #111933;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+.form-title h2 {
+  margin-top: 80px;
+}
+
+// --- FORM LOGIN --- //
+.form-container-login {
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 0 auto;
+  width: 970px;
+  height: 450px;
+}
+
+.form-login {
+  width: 576px;
+  height: 450px;
+  color: #000;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .btn {
+    color: #6797F3;
+    width: 100%;
+    padding: 10px;
+    background-color: #111933;
+  }
+}
+
+.form-title-login {
+  width: 393px;
+  height: 450px;
+  background-color: #111933;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+.form-title-login h2 {
+  margin-top: 50px;
+}
+
+// --- FORM FORGOT PASSWORD --- //
+
+.form-container-fp {
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 0 auto;
+  width: 970px;
+  height: 450px;
+}
+
+.form-fp {
+  width: 576px;
+  height: 450px;
+  color: #000;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .btn {
+    color: #6797F3;
+    width: 100%;
+    padding: 10px;
+    background-color: #111933;
+  }
+}
+
+.form-title-fp {
+  width: 393px;
+  height: 450px;
+  background-color: #111933;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+.form-title-fp h2 {
+  margin-top: 50px;
+}
+
+.sl-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  .sl-link {
+    margin: 0 30px;
+    padding: 10px 40px;
+    color: #fff;
+    background-color: #4298F4;
+    text-decoration: none;
+   }
+
+}
+
+.link-c {
+  color: #fff;
+  text-decoration: none;
+  &:hover {
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+.people-img {
+  width: 400px;
+  height: 400px;
+  margin-top: 80px;
+  background-size: cover;
+  background-position: center;
 }
 
 #offer_description {
   height: 90px;
 }
 
-.container {
-  background-color: $greentwo;
-}
-
-.form-search-wrapper {
-
+.fg-pass-text {
+  font-size: 15px;
 }

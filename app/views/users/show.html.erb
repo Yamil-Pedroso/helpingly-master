@@ -1,7 +1,9 @@
+<% @disable_nav=true %>
+
 <div class="page">
   <div class="left">
     <p> <%= image_tag 'https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60', class: "profile_pic" %> </p>
-      <h5> <%= current_user.email %> </h5>
+      <h5> <%= current_user.name %> </h5>
       <div class="button">
       <%= link_to "Create a new offer", new_offer_path, class: "btn btn-ghost envelope" %>
     </div>

@@ -1,21 +1,39 @@
-<h2>Log in</h2>
+<% @disable_nav=true %>
 
-<div class = "form">
-  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: {turbo: false}) do |f| %>
-    <div class="form-inputs">
-      <%= f.input :email,
-                  required: false,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" } %>
-      <%= f.input :password,
-                  required: false,
-                  input_html: { autocomplete: "current-password" } %>
-      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+<div class="form-wrapper">
+  <div class="form-container-login">
+    <div class="form-title-login">
+      <h2 style="color: #4975CB;">Log in</h2>
+      <h5 style="color: #fff;">Need and account?
+        <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+        <%= link_to "Sign up", new_registration_path(resource_name) %><br />
+        <% end %>
+      </h5>
+      <%= image_tag("https://img.freepik.com/premium-vector/seamless-pattern-with-children-drawings_514903-173.jpg?w=2000", class:"people-img") %>
     </div>
 
-    <div class="form-actions">
-      <%= f.button :submit, "Log in" %>
+    <div class = "form-login">
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: {turbo: false}) do |f| %>
+        <div class="form-inputs">
+          <%= f.input :email,
+                      required: false,
+                      autofocus: true,
+                      input_html: { autocomplete: "email" } %>
+          <%= f.input :password,
+                      required: false,
+                      input_html: { autocomplete: "current-password" } %>
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Log in" %>
+        </div>
+       <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+        <%= link_to "Forgot your password?", new_password_path(resource_name), class:"fg-pass-text" %><br />
+       <% end %>
+      <% end %>
     </div>
-  <% end %>
-  <p>Need an account? <%= render "devise/shared/links" %></p>
+  </div>
 </div>
+
+<% @disable_footer=true %>
