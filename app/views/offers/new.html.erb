@@ -1,12 +1,15 @@
 <% @disable_nav=true %>
 
-<div class = "container">
-  <h1 class = "header">Create a new offer</h1>
-  <%= render "form", Offer: @offer %>
-
-  <br>
-</div>
-
-<div class = "button">
-  <%= link_to "Back to my page", user_path(current_user), class:"btn btn-ghost" %>
+<div class="form-wrapper-offer">
+  <div class="form-container-offer">
+    <div class="form-title-offer">
+      <h2 style="color: #fff;">Create your<span style="color: #4975CB;"> Offer</span></h2>
+      <h5 style="color: #fff;">Lorem ipsum dolor sit amet,
+       consectetur  impro</h5>
+    </div>
+    <%= render "form", Offer: @offer %>
+  </div>
+   <div class="back-offer-btn-wrapper">
+     <%= link_to "Back to dashboard", user_path(current_user), class:"back-btn" %>
+   </div>
 </div>

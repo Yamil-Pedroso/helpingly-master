@@ -1,3 +1,5 @@
+<% @disable_nav=true %>
+
 <div class = "container">
   <h1 class = "header">Edit <%= @offer.title %> </h1>
   <%= render "form", Offer: @offer %>
@@ -6,5 +8,5 @@
 </div>
 
 <div class = "button">
-  <%= link_to "Back to my page", user_path(current_user), class:"btn btn-ghost" %>
+  <%= link_to "Back to dashboard", user_path(current_user), class:"btn btn-ghost" %>
 </div>
