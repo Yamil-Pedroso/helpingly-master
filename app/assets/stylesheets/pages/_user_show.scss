@@ -1,21 +1,11 @@
-.page {
+.dashboard-wrapper {
   display: flex;
 }
 
-.left {
-  width:25vw;
-  max-width:25vw;
-  border-right: solid 1px rgb(128, 128, 128);
-  text-align: center;
-
-  .fa-solid {
-    font-size: 100px;
-  }
-}
-
-.right {
-  width:75vw;
-  max-width:75vw;
+.dash-right {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }
 
 .header {
