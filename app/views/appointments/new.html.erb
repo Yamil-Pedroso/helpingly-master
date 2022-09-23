@@ -1,8 +1,15 @@
-<div class = "container">
-  <h1 class = "header">Book the appointment</h1>
-  <%= render "form", Appointment: @appointment %>
-  <br>
+<% @disable_nav=true %>
+
+<div class="form-wrapper-book">
+  <div class="form-container-book">
+    <div class="form-title-book">
+      <p style="color: #fff; font-size:3rem;">Book an<span style="color: #4975CB;"> appointment</span></p>
+       <h5 style="color: #fff; text-align: center;">Please fill out the form below to
+       make and appointment</h5>
+    </div>
+    <%= render "form", Appointment: @appointment %>
+ </div>
+<div class="back-btn-wrapper">
+  <%= link_to "Back to dashboard", current_user, class:"back-btn" %>
 </div>
-<div class = "button">
-  <%= link_to "Back to profile", current_user, class:"btn btn-ghost" %>
 </div>
