@@ -3,21 +3,26 @@
 }
 
 .booking {
-  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 225px;
+}
+
+.booking-btn {
+  width: 20%;
   height: 50px;
-  background-color: $greensix;
+  background-color: rgb(28, 24, 47);
   border-radius: 50px;
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 120px;
+
 }
 
-.booking a {
-  color: white;
+.booking-btn a {
+  color: #7696D4;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 2.5em;
   font-weight: bold;
 }
 
@@ -44,7 +49,10 @@
 
 .more {
   margin-top: 50px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .left-d {
@@ -66,7 +74,7 @@
 }
 
 #cool-map {
-  margin-top: 100px;
+  width: 75%;
 }
 
 .offer-pic {
@@ -83,4 +91,75 @@
 
 .discover-more {
   text-decoration: none;
+}
+
+.content-wrapper {
+  margin-top: 100px;
+  display: flex;
+}
+
+.offer-details {
+  display: flex;
+  justify-content: center;
+}
+
+.offer-imagen {
+  margin-left: 250px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.offers-text-details {
+  margin-left: 40px;
+  margin-top: 50px;
+}
+
+.offer-d p {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.offers-text-details h4 {
+  width: 75%;
+}
+
+.price-location {
+  margin-top: 25px;
+}
+.price-location h4 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.price-location p {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.offer-more-wrapper {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.rounded-img {
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.mapita {
+  margin-top: 25px;
+}
+
+.line {
+  width: 150px;
+  height: 5px;
+  background-color: #4975CB;
 }

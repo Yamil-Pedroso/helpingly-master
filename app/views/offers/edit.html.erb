@@ -1,10 +1,14 @@
 <% @disable_nav=true %>
 
-<div class = "container">
-  <h1 class = "header">Edit <%= @offer.title %> </h1>
+<div class="form-wrapper-edit-offer">
+  <div class="form-container-edit-offer">
+    <div class="form-title-edit-offer">
+      <h1 style="color: #fff;">Edit <span style="color: #4975CB;"><%= @offer.title %></span></h1>
+      <h5 style="color: #fff;">Lorem ipsum dolor sit amet,
+       consectetur  impro</h5>
+    </div>
   <%= render "form", Offer: @offer %>
-
-  <br>
+  </div>
 </div>
 
 <div class = "button">

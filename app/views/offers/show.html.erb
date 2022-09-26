@@ -1,62 +1,57 @@
 <% @disable_nav=true %>
 
-<div class="cont-wrapper">
-  <div class="grid">
-    <div class="g-col-6 m-3">
-      <h1>
-        <%= @offer.title %>
-      </h1>
-      <hr class="border border-dark border-2 opacity-50">
-      <h4>
-        <%= @offer.description %>
-      </h4>
-      <br>
-      <div class = "pricelocation">
-        <h5>CHF <%= @offer.hourly_rate %></h5>
-        <h4><i class="fa-solid fa-location-dot"></i> <%= @offer.location %></h2>
+<div class="content-wrapper">
+  <div class="offer-details">
+
+      <div class="offer-imagen">
+          <%= cl_image_tag(@offer.photo.key, width: 600, height: 840, crop: :fill) %>
       </div>
-      <div class="booking">
-        <%= link_to "Book", new_offer_appointment_path(@offer) %>
+
+      <div class="offers-text-details">
+        <div class="offer-d">
+          <p>
+            <%= @offer.title %>
+          </p>
+          <h4>
+            <%= @offer.description %>
+          </h4>
+
+           <div class="mapita">
+             <div id="cool-map" style="width: 75%; height: 400px;"
+               data-controller="map"
+               data-map-markers-value="<%= Array(@markers).to_json %>"
+               data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+             </div>
+           </div>
+        </div>
+
+        <div class="price-location">
+          <h4><i class="fa-solid fa-location-dot" style="color: #4975CB;"></i> <%= @offer.location %></h2>
+          <p>CHF <%= @offer.hourly_rate %></p>
+        </div>
+        <div class="booking">
+          <%= link_to "Book", new_offer_appointment_path(@offer), class:"booking-btn" %>
+        </div>
       </div>
-      <hr class="border border-dark border-2 opacity-50" style="margin-top: 75px;">
-    </div>
-    <div class="g-col-6">
-      <div class="g-col-6 g-col-md-4">
-          <%= cl_image_tag(@offer.photo.key, width: 600, height: 500, crop: :fill) %>
-      </div>
-    </div>
+
   </div>
 </div>
 
   <div class="more">
-    <h3>MORE FROM THIS HELPER...</h3>
+    <h2>Discover more from this people</h2>
+    <div class="line"></div>
   </div>
 
-<div class="grid">
+<div class="">
   <% @offer.user.offers.excluding(@offer).each do |offer| %>
-    <div class="g-col-md-4">
+    <div class="offer-more-wrapper">
         <%= link_to(offer_path(offer), class: "card-link") do %>
-          <div class="card-trip">
+          <div class="offer-more-detail">
             <% if offer.photo.attached? %>
-              <%= cl_image_tag offer.photo.key, height: 300, width: 400, crop: :fill %>
+              <%= cl_image_tag offer.photo.key, height: 200, width: 200, crop: :fill, class:"rounded-img" %>
             <% end %>
-            <div class="card-trip-infos">
-              <div>
-                <h2> <%= offer.title  %> </h2>
-                <p><%= offer.description.truncate(30, separator: ' ') %> </p>
-              </div>
-              <h2 class="card-trip-pricing"> CHF <%= offer.hourly_rate  %> </h2>
-            </div>
           </div>
         <% end %>
       </div>
   <% end %>
-</div>
-
-<div class="container">
-  <div id="cool-map" style="width: 100%; height: 600px;"
-    data-controller="map"
-    data-map-markers-value="<%= Array(@markers).to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-  </div>
 </div>

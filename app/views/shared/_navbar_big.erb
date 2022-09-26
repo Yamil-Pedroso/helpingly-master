@@ -13,7 +13,21 @@
           <div class="nav-wrapper">
           <div class="primary-navigation">
             <ul id="navi">
-              <li><a href="#"> <ion-icon name="person-circle-outline"></ion-icon></a>
+             <li class="dropdown">
+                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <ion-icon name="person-circle-outline"></ion-icon>
+                </a>
+                <ul class="dropdown-menu">
+                <% if user_signed_in? %>
+                  <li><%= link_to "My dashboard", user_path(current_user), class: "dropdown-item" %></li>
+                  <li> <%= button_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete, form: {"data-turbo": false}%></li>
+                <% else %>
+                  <li><%= link_to "Sign up", new_user_registration_path, class: "dropdown-item" %> </li>
+                  <li><%= link_to "Log in", new_user_session_path, class: "dropdown-item" %></li>
+                <% end %>
+                </ul>
+             </li>
+            <!--<li><a href="#"> <ion-icon name="person-circle-outline"></ion-icon></a>
             <ul class="dropdown" style="z-index: 1;">
               <%# if user_signed_in? %>
                 <li><%#= link_to "My page", user_path(current_user) %></li>
@@ -23,7 +37,7 @@
                 <li><%#= link_to "Log in", new_user_session_path %></li>
               <%# end %>
              </ul>
-            </li>
+            </li>-->
            </ul>
          </div>
         </div>
