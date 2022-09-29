@@ -32,6 +32,10 @@
   justify-content: center;
 }
 
+.img-home-offers {
+  margin: 5px;
+}
+
 .offer-img {
   width: 200px;
   height: 200px;
@@ -139,19 +143,30 @@
   font-weight: bold;
 }
 
-.offer-more-wrapper {
-  margin-top: 50px;
+.offer-big-wrapper {
   display: flex;
   justify-content: center;
+}
+
+.offer-more-wrapper {
+  margin-top: 50px;
   border-radius: 50%;
   overflow: hidden;
 }
 
+.offer-more-detail {
+}
+
 .rounded-img {
   border-radius: 50%;
+  margin: 20px;
   object-fit: cover;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+}
+
+.menu-style {
+  margin-right: 30px;
 }
 
 .mapita {
@@ -162,4 +177,16 @@
   width: 150px;
   height: 5px;
   background-color: #4975CB;
+}
+
+.inner-text {
+  position: relative;
+}
+
+.inner-text p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
 }

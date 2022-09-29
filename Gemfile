@@ -5,6 +5,8 @@ ruby "3.1.2"
 
 gem "geocoder"
 
+gem "pg_search"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3", ">= 7.0.3.1"
 
@@ -79,5 +81,3 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-
-

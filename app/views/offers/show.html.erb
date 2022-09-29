@@ -42,7 +42,7 @@
     <div class="line"></div>
   </div>
 
-<div class="">
+<div class="offer-big-wrapper">
   <% @offer.user.offers.excluding(@offer).each do |offer| %>
     <div class="offer-more-wrapper">
         <%= link_to(offer_path(offer), class: "card-link") do %>

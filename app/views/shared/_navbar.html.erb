@@ -6,7 +6,7 @@
     </div>
     <div class="g-title-wrapper">
      <div class="g-title">
-      <p style="font-size:20px;">Lorem ipsum dolor sit amet, consectetur</p>
+      <p style="font-size:20px;">Here you will find what you are looking for.</p>
       <h2 style="color: #fff; font-size:4.5rem;">
         Now It’s Easy To
         Find <span style="color: #4975CB;">Offers</span>
@@ -18,18 +18,21 @@
 
     <div class="primary-navigation">
       <ul id="navi">
-        <li class="dropdown">
+        <h4>Welcome</h4>
+        <li class="dropdown-center">
           <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <ion-icon name="person-circle-outline"></ion-icon>
           </a>
           <ul class="dropdown-menu">
-          <% if user_signed_in? %>
-            <li><%= link_to "My dashboard", user_path(current_user), class: "dropdown-item" %></li>
-            <li> <%= button_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete, form: {"data-turbo": false} %></li>
-          <% else %>
-            <li><%= link_to "Sign up", new_user_registration_path, class: "dropdown-item" %> </li>
-            <li><%= link_to "Log in", new_user_session_path, class: "dropdown-item" %></li>
-          <% end %>
+           <div style="margin-right: 40px;">
+            <% if user_signed_in? %>
+              <li><%= link_to "My dashboard", user_path(current_user), class: "dropdown-item" %></li>
+              <li><%= button_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete, form: {"data-turbo": false} %></li>
+            <% else %>
+              <li><%= link_to "Sign up", new_user_registration_path, class: "dropdown-item" %> </li>
+              <li><%= link_to "Log in", new_user_session_path, class: "dropdown-item" %></li>
+            <% end %>
+           </div>
           </ul>
         </li>
         <!--<li><a href="#"> <ion-icon name="person-circle-outline"></ion-icon></a>

@@ -12,13 +12,12 @@ class OffersController < ApplicationController
     end
 
     if params[:query].present?
-      @offers = @offers.where("location ILIKE ?", "%#{params[:query]}%")
+      @offers = @offers.where("title ILIKE ?", "%#{params[:query]}%")
     end
 
     if params[:category].present?
-      @offers = @offers.where(category: params[:category])
+      @offers = @offers.where("category ILIKE ?", "%#{params[:category]}%")
     end
-
   end
 
   def new

@@ -9,10 +9,26 @@
 
 }
 
+.carru-title {
+  color: #688DD6;
+  font-weight: 600;
+  line-height: 77px;
+  font-size: 3.8rem;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+
 #navi {
   position: absolute;
   right: 0;
-  top: 19px;
+  top: 26px;
+  display: flex;
+}
+
+#navi h4 {
+  margin-top: 5px;
+  color: white;
 }
 
 .left-nav {
@@ -67,7 +83,7 @@
 }
 
 .dropdown-item {
-  margin-right: 100px;
+  margin-right: 150px;
 }
 
 .form-wrapper {
