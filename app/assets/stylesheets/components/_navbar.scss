@@ -6,7 +6,33 @@
   width: 54%;
   height: 100px;
   background-color: #3CA0E7;
+}
 
+.blue-franja {
+  width: 280px;
+  height: 100px;
+  display: flex;
+  background-color: #111933;
+}
+
+.g-logo-big {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.g-logo-big h1 {
+  font-size: 5rem;
+  color:#4975CB;
+  font-weight:bold;
+}
+.g-logo-big p {
+  color: #fff;
+  margin-top: 40px;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .carru-title {
@@ -23,6 +49,12 @@
   position: absolute;
   right: 0;
   top: 26px;
+  display: flex;
+}
+#navi-big {
+  position: absolute;
+  right: 0;
+  top: 25px;
   display: flex;
 }
 
@@ -66,7 +98,7 @@
 
 .navbar {
   background-color: #3CA0E7;
-  height: 80px;
+  height: 100px;
 }
 .navbar-right {
   margin-right: 30px;
@@ -116,7 +148,7 @@ ion-icon {
 }
 
 .primary-navigation {
-  transition: all 0.3s ease;
+
   z-index: 999;
 }
 
@@ -156,7 +188,7 @@ ion-icon {
   min-width: 150px;
   text-align: left;
   padding-top: 20px;
-  box-shadow: 0px 3px 5px -1px #ccc;
+  //box-shadow: 0px 3px 5px -1px #ccc;
 }
 .primary-navigation ul li ul li {
 

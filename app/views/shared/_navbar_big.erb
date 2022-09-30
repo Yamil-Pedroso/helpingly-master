@@ -1,47 +1,54 @@
-<nav class="navbar navbar-expand-lg sticky-top shadow rounded">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="active text-light" aria-current="page" href="#"><%= link_to "HELPINGLY", root_path, class: "navbutton nav-big" %></a>
-        </li>
-      </ul>
-      <div class="navbar-right">
-          <div class="nav-wrapper">
-          <div class="primary-navigation">
-            <ul id="navi">
-             <li class="dropdown">
-                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <ion-icon name="person-circle-outline"></ion-icon>
-                </a>
-                <ul class="dropdown-menu">
-                <% if user_signed_in? %>
-                  <li><%= link_to "My dashboard", user_path(current_user), class: "dropdown-item" %></li>
-                  <li> <%= button_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete, form: {"data-turbo": false}%></li>
-                <% else %>
-                  <li><%= link_to "Sign up", new_user_registration_path, class: "dropdown-item" %> </li>
-                  <li><%= link_to "Log in", new_user_session_path, class: "dropdown-item" %></li>
-                <% end %>
-                </ul>
-             </li>
-            <!--<li><a href="#"> <ion-icon name="person-circle-outline"></ion-icon></a>
-            <ul class="dropdown" style="z-index: 1;">
-              <%# if user_signed_in? %>
-                <li><%#= link_to "My page", user_path(current_user) %></li>
-                <li><%#= link_to "Log out", destroy_user_session_path, method: :delete, form: {"data-turbo": false} %></li>
-              <%# else %>
-                <li><%#= link_to "Sign up", new_user_registration_path %> </li>
-                <li><%#= link_to "Log in", new_user_session_path %></li>
-              <%# end %>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+    <%= link_to root_path do %>
+      <div class="blue-franja">
+        <div class="g-logo-big">
+          <h1 style="">G</h1>
+          <p style="font-weight:bold">elpingly</p>
+        </div>
+      </div>
+    <% end %>
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"   aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="active text-light" aria-current="page" href="#"><%= link_to "HELPINGLY", root_path, class: "navbutton nav-big" %></a>
+          </li>
+        </ul>
+        <div class="navbar-right">
+            <div class="nav-wrapper">
+            <div class="primary-navigation">
+              <ul id="navi-big">
+               <li class="dropdown">
+                    <ion-icon name="person-circle-outline"></ion-icon>
+                  <ul class="dropdown-menu">
+                  <% if user_signed_in? %>
+                    <li><%= link_to "My dashboard", user_path(current_user), class: "dropdown-item" %></li>
+                    <li> <%= button_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete, form: {"data-turbo":   false}%></li>
+                  <% else %>
+                    <li><%= link_to "Sign up", new_user_registration_path, class: "dropdown-item" %> </li>
+                    <li><%= link_to "Log in", new_user_session_path, class: "dropdown-item" %></li>
+                  <% end %>
+                  </ul>
+               </li>
+              <!--<li><a href="#"> <ion-icon name="person-circle-outline"></ion-icon></a>
+              <ul class="dropdown" style="z-index: 1;">
+                <%# if user_signed_in? %>
+                  <li><%#= link_to "My page", user_path(current_user) %></li>
+                  <li><%#= link_to "Log out", destroy_user_session_path, method: :delete, form: {"data-turbo": false} %></li>
+                <%# else %>
+                  <li><%#= link_to "Sign up", new_user_registration_path %> </li>
+                  <li><%#= link_to "Log in", new_user_session_path %></li>
+                <%# end %>
+               </ul>
+              </li>-->
              </ul>
-            </li>-->
-           </ul>
-         </div>
+           </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </nav>

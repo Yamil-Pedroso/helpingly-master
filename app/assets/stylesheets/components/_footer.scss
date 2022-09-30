@@ -3,9 +3,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 60px;
+    height: 80px;
     padding: 0px 50px;
-    margin-top: 100vh;
+    margin-top: 100px;
     color: rgba(0,0,0,0.3);
     position: sticky;
     bottom: 0;
@@ -15,19 +15,18 @@
     align-items: center;
   }
   .footer-links a {
-    color: #fff;
-    opacity: 0.15;
+    color: rgb(174, 174, 174);
     text-decoration: none;
     font-size: 24px;
     padding: 0px 10px;
   }
   .footer-links a:hover {
-    opacity: 1;
+    color: #6e9eff;
   }
   .footer .fa-heart {
-    color: pink;
+    color: rgb(57, 57, 193);
   }
 
   .footer-copyright {
-    color: #fff;
+    color: rgb(174, 174, 174);
   }
