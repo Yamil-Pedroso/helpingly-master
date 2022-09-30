@@ -4,13 +4,11 @@
   <div class="form-container-edit-offer">
     <div class="form-title-edit-offer">
       <h1 style="color: #fff;">Edit <span style="color: #4975CB;"><%= @offer.title %></span></h1>
-      <h5 style="color: #fff;">Lorem ipsum dolor sit amet,
-       consectetur  impro</h5>
+      <h5 style="color: #fff;">Give the customers what they needs.</h5>
     </div>
   <%= render "form", Offer: @offer %>
   </div>
-</div>
-
-<div class = "button">
-  <%= link_to "Back to dashboard", user_path(current_user), class:"btn btn-ghost" %>
+  <div class="back-offer-btn-wrapper">
+    <%= link_to "Back to dashboard", user_path(current_user), class:"back-btn" %>
+  </div>
 </div>
