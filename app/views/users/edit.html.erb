@@ -1,2 +1,14 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<% @disable_nav=true %>
+
+<div class="form-wrapper-edit-offer">
+  <div class="form-container-edit-offer">
+    <div class="form-title-edit-offer">
+      <h1 style="color: #fff;">Edit <span style="color: #4975CB;"><%= current_user.name %></span></h1>
+      <h5 style="color: #fff;">Give the customers what they needs.</h5>
+    </div>
+  <%= render "form", User: @user %>
+  </div>
+  <div class="back-offer-btn-wrapper">
+    <%= link_to "Back to dashboard", class: "back-offer-btn" %>
+  </div>
+</div>

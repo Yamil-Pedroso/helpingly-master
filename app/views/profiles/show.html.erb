@@ -1,0 +1,8 @@
+<% @disable_nav = true %>
+
+<h1>Profiles#show</h1>
+<p>Find me in app/views/profiles/show.html.erb</p>
+
+<div class="profile-imagen">
+  <%= cl_image_tag(@profile.photo.key, width: 600, height: 840, crop: :fill) %>
+</div>

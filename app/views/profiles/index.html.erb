@@ -1,0 +1,22 @@
+<% @disable_nav = true %>
+
+<h1>Profiles#index</h1>
+<div data-bs-toggle="modal" data-bs-target="#exampleModal" style="display:flex; justify-content: center;">
+  Change photo
+  <% @profiles.each do |profile| %>
+    <%= cl_image_tag(profile.photo.key, height: 50, width: 50, crop: :fill) %>
+  <% end %>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+        <%= render "form", Profile: @profile %>
+      </div>
+    </div>
+  </div>
+</div>

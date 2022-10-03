@@ -1,0 +1,9 @@
+<div class="form-profile">
+     <%= simple_form_for(@profile) do |f| %>
+       <%= f.input :photo, as: :file %>
+
+         <div class="form-actions">
+           <%= f.button :submit, 'Create', link_to: 'profiles#index' %>
+         </div>
+     <% end %>
+  </div>

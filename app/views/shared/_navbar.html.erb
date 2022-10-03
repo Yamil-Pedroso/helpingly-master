@@ -18,7 +18,9 @@
 
     <div class="primary-navigation">
       <ul id="navi">
-        <h4>Welcome</h4>
+         <% if user_signed_in? %>
+          <h4>Welcome <%= current_user.name %></h4>
+         <% end %>
         <li class="dropdown">
             <ion-icon name="person-circle-outline"></ion-icon>
           <!--<a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -27,6 +29,7 @@
            <div>
             <% if user_signed_in? %>
               <li><%= link_to "My dashboard", user_path(current_user), class: "dropdown-item" %></li>
+              <li><%= link_to "Edit profile", profiles_path(), class: "dropdown-item" %></li>
               <li><%= button_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete, form: {"data-turbo": false} %></li>
             <% else %>
               <li><%= link_to "Sign up", new_user_registration_path, class: "dropdown-item" %> </li>

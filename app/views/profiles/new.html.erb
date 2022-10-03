@@ -1,0 +1,17 @@
+<h1>Profiles#new</h1>
+<p>Find me in app/views/profiles/new.html.erb</p>
+<% @disable_nav=true %>
+
+<div class="form-wrapper-offer">
+  <div class="form-container-offer">
+    <div class="form-title-offer">
+      <h2 style="color: #fff;">Edit your<span style="color: #4975CB;"> Profile</span></h2>
+      <h5 style="color: #fff;">Lorem ipsum dolor sit amet,
+       consectetur  impro</h5>
+    </div>
+    <%= render "form", Profile: @profile %>
+  </div>
+   <div class="back-offer-btn-wrapper">
+     <%= link_to "Back to dashboard", user_path(current_user), class:"back-btn" %>
+   </div>
+</div>

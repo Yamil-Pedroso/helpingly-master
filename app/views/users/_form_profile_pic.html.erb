@@ -1,0 +1,10 @@
+<div class="form-user-profile">
+     <%= simple_form_for(current_user) do |f| %>
+       <%= f.input :name %>
+       <%= f.input :photo, as: :file %>
+
+         <div class="form-actions">
+           <%= f.button :submit, 'Create' %>
+         </div>
+     <% end %>
+  </div>
