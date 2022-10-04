@@ -3,8 +3,6 @@ class ProfilesController < ApplicationController
 
   def index
     @profiles = Profile.all
-    @user = current_user
-    @profile = Profile.new
   end
 
   def show
@@ -27,7 +25,6 @@ class ProfilesController < ApplicationController
 
   def edit
     @profile = Profile.find(params[:id])
-    @user = current_user
   end
 
   def update
