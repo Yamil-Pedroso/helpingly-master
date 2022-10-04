@@ -2,17 +2,11 @@
 
 <div class="dashboard-wrapper">
    <div class="dash-right">
-     <div>
-         <div class="button">
-           <%= link_to "Create a new offer", new_offer_path %>
-         </div>
-       <%= link_to(user_appointments_path(current_user)) do %>
-         <i class="fa-solid fa-envelope"></i>
-       <% end %>
-     </div>
-     <div class="header">
-       <h2>Hello <%= current_user.name %></h2>
-     </div>
+    <div class="title-co-wrapper">
+          <!--<i class="fa fa-user"></i>-->
+          <h2>Hello <%= current_user.name %></h2>
+          <%= link_to "Create a new offer", new_offer_path, class:"c-offer" %>
+    </div>
      <div class="card-collection-wrapper">
        <div class="cards-wrapper-dash">
          <% current_user.offers.each do |offer| %>
@@ -38,8 +32,8 @@
        </div>
     </div>
 
-     <h2 id=""> Overview of my Bookings </h2>
-     <div class="">
+     <h2 class="overview-title"> Overview of my Bookings </h2>
+     <div class="overview-wrapper">
 
        <table class="table">
          <thead>
@@ -70,5 +64,10 @@
          </tbody>
        </table>
      </div>
+       <div class="manage-appo">
+         <%= link_to(user_appointments_path(current_user), class:"appo-btn") do %>
+           Manage appointments <i class="fas fa-arrow-right"></i>
+         <% end %>
+       </div>
  </div>
 </div>

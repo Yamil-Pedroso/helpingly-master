@@ -190,3 +190,47 @@
   display: flex;
   justify-content: flex-end;
 }
+
+.title-co-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title-co-wrapper h2 {
+  font-weight: bold;
+}
+
+.overview-title {
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+.overview-wrapper {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+}
+
+.manage-appo {
+ text-align: center;
+ margin-top: 20px;
+ font-size:1.5rem;
+ transition: all 0.3s ease-in-out;
+}
+
+.manage-appo .appo-btn {
+  text-decoration: none;
+  color: #4975CB;
+}
+
+.manage-appo:hover {
+  transform: translateX(10px);
+}
+
+.c-offer {
+  font-size: 1.2rem;
+}
