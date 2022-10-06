@@ -1,6 +1,7 @@
 <% @disable_nav=true %>
 
-<table class="table">
+<div class="appo-wrapper">
+ <table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -35,4 +36,8 @@
         </tr>
       <% end %>
   </tbody>
-</table>
+ </table>
+</div>
+   <div class="back-offer-btn-wrapper">
+    <%= link_to "Back to dashboard", user_path(current_user), class:"back-btn" %>
+  </div>
